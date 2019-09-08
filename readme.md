@@ -18,3 +18,4 @@ Als Ausgangstemplate habe ich das [Tailwind-Preset](https://github.com/laravel-f
 
 ## Let's get started
 Also gleich loslegen mit dem Ausgangstemplate starten: <code>https://github.com/SchuBu/laravel-6-forum-tutorial.git</code>    
+s
