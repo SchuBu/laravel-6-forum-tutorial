@@ -14,8 +14,7 @@ In diesem Tutorial erstellen wir mit Hilfe des Frameworks Laravel in Version 6 e
 Auf Github könnt ihr die einzelnen Lektionen über die Branches aufrufen. Der Master-Branch spiegelt immer den aktuellen Stand wider.
 
 ## Template
-Als Ausgangstemplate habe ich das [Tailwind-Preset](https://github.com/laravel-frontend-presets/tailwindcss) verwendet. Die Einrichtung und Vorbereitung des Templates zeige ich im Tutorial nicht.  
+Als Ausgangstemplate habe ich das [Tailwind-Preset](https://github.com/laravel-frontend-presets/tailwindcss) verwendet. Die Einrichtung und Vorbereitung des Templates zeige ich im Tutorial nicht. Ihr könnt aber mit dem Branch <code>lesson-0</code> starten. Dort fängt alles an!  
 
 ## Let's get started
-Also gleich loslegen mit dem Ausgangstemplate starten: <code>https://github.com/SchuBu/laravel-6-forum-tutorial.git</code>    
-s
+Also gleich loslegen mit dem Ausgangstemplate starten: <code>https://github.com/SchuBu/laravel-6-forum-tutorial.git</code>
