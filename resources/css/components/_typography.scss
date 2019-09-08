@@ -1,0 +1,79 @@
+main {
+    @apply leading-snug;
+    a {
+        @apply text-blue-500;
+
+        &:hover {
+            @apply underline;
+        }
+    }
+
+    h1,h2,h3,h4,h5 {
+        @apply font-bold mt-10 mb-5;
+    }
+
+    h1 {
+        @apply text-gray-700 text-3xl;
+    }
+
+    h2 {
+        @apply text-gray-700 text-2xl border-b-2 border-gray-500;
+    }
+
+    h3 {
+        @apply text-gray-700 text-xl;
+    }
+
+    h4 {
+        @apply text-gray-600 text-lg;
+    }
+
+    h5 {
+        @apply text-blue-400 text-base;
+    }
+
+
+    .description {
+        @apply text-sm text-gray-600;
+    }
+}
+
+
+/***** Source: http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/ *****/
+@mixin multiLineEllipsis($lineCount: 3, $bgColor: transparent, $lineHeight: 1.375em){
+    overflow: hidden;
+    position: relative;
+    line-height: $lineHeight;
+    max-height: $lineHeight * $lineCount;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1em;
+    &:before {
+        content: '...';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: $bgColor;
+    }
+}
+
+.ellipsis-1 {
+    @include multiLineEllipsis(1);
+}
+
+.ellipsis-2 {
+    @include multiLineEllipsis(2);
+}
+
+.ellipsis-3 {
+    @include multiLineEllipsis();
+}
+/*****************************************************************************************************/

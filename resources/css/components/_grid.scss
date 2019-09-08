@@ -1,0 +1,51 @@
+$sizes: (
+    '1': '0.25rem',
+    '2': '0.5rem',
+    '3': '0.75rem',
+    '4': '1rem',
+    '5': '1.25rem',
+    '6': '1.5rem',
+    '8': '2rem',
+    '10': '2.5rem',
+    '12': '3rem',
+    '16': '4rem',
+    '20': '5rem',
+    '24': '6rem',
+    '32': '8rem',
+    '40': '10rem',
+    '48': '12rem',
+    '56': '14rem',
+    '64': '16rem');
+
+@each $size, $f in $sizes {
+    .gutter-#{$size} {
+        @apply -mx-#{$size};
+        > div {
+            @apply my-#{$size} px-#{$size};
+        }
+    }
+}
+
+$grids: (
+    "2": ("sm":"full", "md":"1/2", "lg":"1/2", "xl":"1/2"),
+    "3": ("sm":"full", "md":"1/2", "lg":"1/2", "xl":"1/3"),
+    "4": ("sm":"full", "md":"1/2", "lg":"1/3", "xl":"1/4"),
+    "5": ("sm":"1/2", "md":"1/3", "lg":"1/4", "xl":"1/5"),
+    "6": ("sm":"1/2", "md":"1/3", "lg":"1/4", "xl":"1/6"),
+    "8": ("sm":"1/2", "md":"1/4", "lg":"1/6", "xl":"1/8"),
+    "10": ("sm":"1/2", "md":"1/6", "lg":"1/8", "xl":"1/10"),
+    "12": ("sm":"1/2", "md":"1/6", "lg":"1/8", "xl":"1/12"),
+);
+@each $cols,$sizes in $grids {
+    .grid-cols-#{$cols} {
+        @apply flex flex-wrap overflow-hidden;
+        > div.grid-col {
+            @apply w-full overflow-hidden;
+            @each $name,$size in $sizes {
+                @screen #{$name} {
+                    @apply  w-#{$size};
+                }
+            }
+        }
+    }
+}

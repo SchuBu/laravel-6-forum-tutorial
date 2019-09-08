@@ -1,0 +1,54 @@
+.card {
+    @apply flex flex-col break-words bg-white border rounded shadow-md mb-5;
+
+    .card-header {
+        @apply font-semibold py-3 px-4 mb-0 rounded-t;
+    }
+
+    &:not([class^="card-color-"]) {
+        .card-header {
+            @apply bg-gray-200 text-gray-700;
+        }
+    }
+
+    &.card-color-success {
+        @apply border-green-500;
+        .card-header {
+            @apply bg-green-200 text-green-700;
+        }
+    }
+    &.card-color-danger {
+        @apply border-red-500;
+        .card-header {
+            @apply bg-red-200 text-red-700;
+        }
+    }
+    &.card-color-info {
+        @apply border-blue-500;
+        .card-header {
+            @apply bg-blue-200 text-blue-700;
+        }
+    }
+    &.card-color-warning {
+        @apply border-yellow-500;
+        .card-header {
+            @apply bg-yellow-200 text-yellow-700;
+        }
+    }
+
+    .card-body {
+        @apply w-full;
+        > p {
+            @apply text-gray-700;
+        }
+    }
+
+    .card-item {
+        @apply p-4 text-gray-700;
+        &:not(:last-child) {
+            @apply border-b;
+        }
+    }
+
+
+}

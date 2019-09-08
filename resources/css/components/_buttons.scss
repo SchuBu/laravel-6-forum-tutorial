@@ -1,0 +1,65 @@
+.btn {
+    @apply font-bold py-2 px-4 rounded;
+    &:hover {
+        @apply no-underline;
+    }
+
+    &:focus {
+        @apply outline-none shadow-outline;
+    }
+}
+
+.btn-primary {
+    @apply bg-blue-500 text-gray-100;
+    &:hover {
+        @apply bg-blue-700;
+    }
+}
+
+.btn-secondary {
+    @apply bg-gray-500 text-gray-100;
+    &:hover {
+        @apply bg-gray-700;
+    }
+}
+
+.btn-danger {
+    @apply bg-red-500 text-gray-100;
+    &:hover {
+        @apply bg-red-700;
+    }
+}
+
+.btn-success {
+    @apply bg-green-500 text-gray-100;
+    &:hover {
+        @apply bg-green-700;
+    }
+}
+
+.btn-warning {
+    @apply bg-yellow-500 text-gray-100;
+    &:hover {
+        @apply bg-yellow-700;
+    }
+}
+
+.btn-xs {
+    @apply text-xs;
+}
+
+.btn-sm {
+    @apply text-sm;
+}
+
+.btn-lg {
+    @apply text-lg;
+}
+
+.btn-xl {
+    @apply text-xl;
+}
+
+.btn-2xl {
+    @apply text-2xl;
+}

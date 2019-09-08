@@ -1,0 +1,87 @@
+.form-group {
+    @apply flex flex-wrap mb-6;
+}
+
+.input-label {
+    @apply block text-gray-700 text-sm font-bold mb-2;
+}
+
+.input-field {
+    @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+    &:focus {
+        @apply outline-none
+        shadow-outline;
+    }
+}
+
+.form-error-msg {
+    @apply text-red-500 text-xs italic mt-4;
+}
+
+
+.form-checkbox {
+    @apply appearance-none inline-block align-middle select-none flex-shrink-0 h-4 w-4 bg-white text-blue-500 border rounded border-gray-300;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    background-origin: border-box;
+}
+
+.form-checkbox:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+    border-color: transparent;
+    background-color: currentColor;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media not print {
+    .form-checkbox::-ms-check {
+        border-width: 1px;
+        color: transparent;
+        background: inherit;
+        border-color: inherit;
+        border-radius: inherit;
+    }
+}
+
+.form-checkbox:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    border-color: #63b3ed;
+}
+
+.form-radio {
+    @apply appearance-none inline-block align-middle select-none flex-shrink-0 w-4 h-4 rounded-full text-blue-500 bg-white border border-gray-300;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    background-origin: border-box;
+}
+
+.form-radio:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+    border-color: transparent;
+    background-color: currentColor;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media not print {
+    .form-radio::-ms-check {
+        border-width: 1px;
+        color: transparent;
+        background: inherit;
+        border-color: inherit;
+        border-radius: inherit;
+    }
+}
+
+.form-radio:focus {
+    @apply outline-none border-blue-400 shadow-outline;
+}
+
+
+.inline-label {
+    @apply ml-2 text-sm text-gray-700;
+}

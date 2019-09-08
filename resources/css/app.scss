@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'components/nav';
+@import 'components/typography';
+@import 'components/grid';
+@import 'components/alerts';
+@import 'components/cards';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/badges';
+
+.container {
+    @apply px-5;
+}

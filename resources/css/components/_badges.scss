@@ -1,0 +1,49 @@
+.badge {
+    @apply rounded px-2 py-1 text-xs font-bold;
+}
+
+a.badge:hover {
+    @apply no-underline;
+}
+
+
+.badge-pill {
+    @apply rounded-full;
+}
+
+.badge-info {
+    @apply bg-blue-500 text-blue-100;
+}
+a.badge-info:hover {
+    @apply bg-blue-600;
+}
+
+.badge-danger {
+    @apply bg-red-500 text-red-100;
+}
+a.badge-danger:hover {
+    @apply bg-red-600;
+}
+
+.badge-warning {
+    @apply bg-yellow-600 text-yellow-100;
+}
+a.badge-warning:hover {
+    @apply bg-yellow-700;
+}
+
+.badge-success {
+    @apply bg-green-500 text-green-100;
+}
+a.badge-success:hover {
+    @apply bg-gray-600;
+}
+
+.badge-muted {
+    @apply bg-gray-500 text-gray-100;
+}
+a.badge-muted:hover {
+    @apply bg-gray-600;
+}
+
+

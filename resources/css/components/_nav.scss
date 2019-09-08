@@ -1,0 +1,14 @@
+nav.head-nav {
+    @apply bg-blue-900 shadow mb-8 py-6;
+    .nav-item {
+        @apply no-underline text-gray-300 border-b-2 border-blue-800 text-sm inline-block px-4 py-2 rounded;
+        &:hover {
+            @apply no-underline bg-blue-800;
+        }
+
+        &:not(:last-child) {
+            @apply mr-2;
+        }
+    }
+}
+

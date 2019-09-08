@@ -1,0 +1,23 @@
+[class^="alert-"] {
+    @apply text-sm border border-t-8 rounded px-3 py-4 mb-4;
+}
+
+.alert-success {
+    @apply text-green-700 border-green-600 bg-green-100;
+}
+
+.alert-danger {
+    @apply text-red-700 border-red-600 bg-red-100;
+}
+
+.alert-info {
+    @apply text-blue-700 border-blue-600 bg-blue-100;
+}
+
+.alert-warning {
+    @apply text-yellow-700 border-yellow-600 bg-yellow-100;
+}
+
+.alert-muted {
+    @apply text-gray-700 border-gray-600 bg-gray-100;
+}
