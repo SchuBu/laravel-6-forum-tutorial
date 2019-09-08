@@ -32,6 +32,10 @@ Route::get('/design', function () {
     return view('design');
 })->name('design');
 
+Route::get('/design/db', function () {
+    return view('design.db');
+});
+
 
 
 Auth::routes();
