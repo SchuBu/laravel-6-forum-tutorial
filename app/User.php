@@ -51,4 +51,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Reply::class);
     }
+
+    public function getPostCountAttribute()
+    {
+        return $this->threads->count() + $this->replies->count();
+    }
 }

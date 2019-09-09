@@ -17,8 +17,10 @@ Route::get('/', function () {
 });
 
 Route::get('/thread/how-to-make-a-forum', function () {
-    return view('thread');
+    return view('design.thread');
 })->name('thread');
+
+Route::resource('thread', 'ThreadController');
 
 Route::get('/profile', function () {
     return view('my-profile');
