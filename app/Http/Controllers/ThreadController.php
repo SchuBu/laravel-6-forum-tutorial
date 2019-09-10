@@ -44,8 +44,10 @@ class ThreadController extends Controller
      * @param  \App\Thread  $thread
      * @return \Illuminate\Http\Response
      */
-    public function show(Thread $thread)
+    public function show($thread)
     {
+        $thread = Thread::with('user','replies.user')->findOrFail($thread);
+
         return view('thread', compact('thread'));
     }
 

@@ -14,9 +14,6 @@
                 <a href="#">Kategorie 1</a> <i class="fa fa-angle-double-right fa-fw"></i> <a href="#">Subkategorie</a> <i class="fa fa-angle-double-right fa-fw"></i> <a href="#">3 An example Forum</a>
             </div>
             <h1>{{$thread->title}}</h1>
-            <?php
-            $date = \Carbon\Carbon::now()->subMinutes(rand(1, 55))->locale('de_DE');
-            ?>
 
             <div class="card card-color-info">
                 <div class="card-header flex justify-between">
