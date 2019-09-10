@@ -26,7 +26,6 @@
                         <div>gepostet {{$date->addMinutes(rand(1,50000))->isoFormat('dddd, DD.MM.YYYY')}} um {{$date->isoFormat('HH:mm:ss')}}</div>
                         <div><a href="#">#{{$i+1}}</a></div>
                     </div>
-w
                     <div class="card-body">
                         @include('components/forum-thread-item', ["cite" => rand(0,1)])
                     </div>
