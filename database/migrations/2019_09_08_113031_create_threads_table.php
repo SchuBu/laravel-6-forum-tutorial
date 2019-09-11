@@ -15,13 +15,14 @@ class CreateThreadsTable extends Migration
     {
         Schema::create('threads', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->longText('body');
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
