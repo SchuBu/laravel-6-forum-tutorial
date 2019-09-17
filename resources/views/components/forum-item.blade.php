@@ -2,8 +2,8 @@
     <div class="flex flex-1">
         <div class="w-10"><i class="fa fa-comments fa-lg"></i></div>
         <div class="flex-1">
-            <a href="#">An example Forum</a> <br>
-            <div class="description ellipsis-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adip Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dignissimos ea eligendi molestias odit pariatur. Assumenda iste laudantium minima molestiae officiis. Earum eligendi hic obcaecati placeat quae repudiandae sed!</div>
+            <a href="{{route('forum',["id" => $child->id])}}">{{$child->name}}</a> <br>
+            <div class="description ellipsis-2">{{$child->description}}</div>
         </div>
         <div class="w-16 text-right">
             {!! ['<i class="fa fa-check-circle text-green-500"></i>','<i class="fa fa-times-circle text-red-500"></i>'][rand(0,1)]  !!}
@@ -11,7 +11,7 @@
     </div>
     <div class="flex mt-5 md:mt-0">
         <div class="w-32 text-right pr-5">
-            Threads: 7<br>
+            Threads: {{$child->threadsCount}}<br>
             Posts: 124
         </div>
         <div class="w-64">

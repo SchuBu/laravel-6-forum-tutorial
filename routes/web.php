@@ -12,9 +12,9 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('welcome');
+Route::get('/forum/{id}', 'HomeController@forum')->name('forum');
+
 
 Route::get('/thread/how-to-make-a-forum', function () {
     return view('design.thread');

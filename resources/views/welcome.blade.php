@@ -10,21 +10,51 @@
                 </div>
             @endif
 
-            @for($j=0;$j<=2;$j++)
-                <div class="card">
-                    <div class="card-header">
-                        Kategorie {{$j+1}}
-                    </div>
+            <div class="mb-5">
+                {!! $categories->first()->breadcrumb !!}
+            </div>
 
-                    <div class="card-body">
-                        @for($i=0;$i<=2;$i++)
-                            <div class="card-item">
-                                @include('components/forum-item')
-                            </div>
-                        @endfor
+            @if($categories)
+                @foreach($categories as $category)
+                    <div class="card">
+                        <div class="card-header">{{$category->name}}</div>
+                        <div class="card-body">
+                            @if($category->children->count() > 0)
+                                @foreach($category->children as $child)
+                                    <div class="card-item">
+                                        @include('components.forum-item')
+                                    </div>
+                                @endforeach
+                            @else
+                                <div class="card-item font-bold bg-blue-300">Threads</div>
+                                @foreach($category->threads as $thread)
+                                    <div class="card-item">
+                                        {{$thread->title}}
+                                    </div>
+                                @endforeach
+
+                            @endif
+                        </div>
                     </div>
-                </div>
-            @endfor
+                @endforeach
+
+            @endif
+
+            {{--            @for($j=0;$j<=2;$j++)
+                            <div class="card">
+                                <div class="card-header">
+                                    Kategorie {{$j+1}}
+                                </div>
+
+                                <div class="card-body">
+                                    @for($i=0;$i<=2;$i++)
+                                        <div class="card-item">
+                                            @include('components/forum-item')
+                                        </div>
+                                    @endfor
+                                </div>
+                            </div>
+                        @endfor--}}
 
         </div>
     </div>

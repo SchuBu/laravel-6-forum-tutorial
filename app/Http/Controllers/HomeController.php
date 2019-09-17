@@ -24,7 +24,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $categories = Category::where('parent_id',null)->with('children')->get();
+        return view('welcome', compact('categories'));
+    }
+
+    public function forum($id)
+    {
+        $categories = Category::where('id',$id)->with('children')->get();
+
+        return view('welcome', compact('categories'));
     }
 
     public function test()
