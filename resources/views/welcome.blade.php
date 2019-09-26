@@ -29,7 +29,7 @@
                                 <div class="card-item font-bold bg-blue-300">Threads</div>
                                 @foreach($category->threads as $thread)
                                     <div class="card-item">
-                                        {{$thread->title}}
+                                        {{$thread->id}} {{$thread->title}} ({{$thread->replyCount}})
                                     </div>
                                 @endforeach
 

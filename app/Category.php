@@ -46,7 +46,17 @@ class Category extends Model
 
     public function descendantsThreads()
     {
+        return Thread::whereIn('category_id', self::descendantsAndSelf($this->id)->pluck('id')->toArray())->get();
+    }
 
+    public function getReplyCountAttribute()
+    {
+        return Reply::whereIn('thread_id',$this->descendantsThreads()->pluck('id'))->get()->count();
+    }
+
+    public function getLatestReplyAttribute()
+    {
+        return Reply::whereIn('thread_id',$this->descendantsThreads()->pluck('id'))->latest()->first();
     }
 
 

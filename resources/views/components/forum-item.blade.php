@@ -12,13 +12,13 @@
     <div class="flex mt-5 md:mt-0">
         <div class="w-32 text-right pr-5">
             Threads: {{$child->threadsCount}}<br>
-            Posts: 124
+            Posts: {{$child->replyCount}}
         </div>
         <div class="w-64">
-            <a href="{{route('thread')}}">How to make a Forum</a><br>
+            <a href="{{route('thread')}}">{{$child->latestReply->thread->title}}</a><br>
             <div class="description">
-                <span class="author">von <a href="#">Peter</a></span><br>
-                <span class="date">{{ \Carbon\Carbon::now()->locale('de_DE')->subMinutes(rand(1,120))->diffForHumans() }}</span>
+                <span class="author">von <a href="#">{{$child->latestReply->user->name}}</a></span><br>
+                <span class="date">{{ $child->latestReply->created_at->locale('de_DE')->diffForHumans() }}</span>
             </div>
         </div>
     </div>
