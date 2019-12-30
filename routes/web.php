@@ -21,6 +21,7 @@ Route::get('/thread/how-to-make-a-forum', function () {
 })->name('thread');
 
 Route::resource('thread', 'ThreadController');
+Route::resource('forum.thread', 'ForumThreadController');
 
 Route::get('/profile', function () {
     return view('my-profile');

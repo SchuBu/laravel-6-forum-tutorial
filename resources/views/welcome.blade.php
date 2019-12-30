@@ -14,6 +14,12 @@
                 {!! $categories->first()->breadcrumb !!}
             </div>
 
+            @if ($categories->first()->isLeaf())
+                <div class="flex justify-end mb-3">
+                    <a href="{{route('forum.thread.create', $categories->first()->id)}}" class="btn btn-xs btn-primary">Thread erstellen</a>
+                </div>
+            @endif
+
             @if($categories)
                 @foreach($categories as $category)
                     <div class="card">

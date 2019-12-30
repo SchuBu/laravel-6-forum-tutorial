@@ -32,6 +32,7 @@ class HomeController extends Controller
     {
         $categories = Category::where('id',$id)->with('children')->get();
 
+
         return view('welcome', compact('categories'));
     }
 
