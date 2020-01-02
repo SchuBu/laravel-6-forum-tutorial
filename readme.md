@@ -18,3 +18,18 @@ Als Ausgangstemplate habe ich das [Tailwind-Preset](https://github.com/laravel-f
 
 ## Let's get started
 Also gleich loslegen mit dem Ausgangstemplate starten: <code>https://github.com/SchuBu/laravel-6-forum-tutorial.git</code>
+
+## Was muss ich sonst noch wissen?
+Das Tutorial richtet sich an **fortgeschrittene Nutzer**, ihr solltet also schon erste Erfahrungen mit Laravel gesammelt haben.
+
+## Was muss ich tun um zu starten?
+- Clont das GIT-Repository
+- führt <code>composer install</code> aus
+- benennt die <code>.env.example</code> in <code>.env</code> um (z.B. über die Konsole mit <code>mv .env.example .env</code>)
+- anschließend <code>php artisan key:generate</code> ausführen
+- wenn ihr von Anfang an starten wollten, dann die "lesson-0" auschecken: <code>git checkout lesson-0</code>
+- ansonsten müsst ihr zuvor noch eure Datenbank-Verbindung in der <code>.env</code> festlegen und anschließend <code>php artisan migrate --seed</code> ausführen 
+- über <code>php artisan serve</code> könnt ihr den Laravel eigenen Webserver ausführen und das Projekt direkt im Browser betrachten
+
+Happy coding !
+ 
