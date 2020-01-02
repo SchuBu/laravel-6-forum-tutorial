@@ -36,10 +36,21 @@
         }
     }
 
+    &.card-color-gray {
+        @apply border-gray-500;
+        .card-header {
+            @apply bg-gray-200 text-gray-700;
+        }
+    }
+
     .card-body {
         @apply w-full;
         > p {
             @apply text-gray-700;
+        }
+
+        > .card-item {
+            @apply flex;
         }
     }
 
@@ -48,6 +59,10 @@
         &:not(:last-child) {
             @apply border-b;
         }
+    }
+
+    a.card-item:hover {
+        @apply bg-blue-200;
     }
 
 

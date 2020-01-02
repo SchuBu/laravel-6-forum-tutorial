@@ -35,9 +35,9 @@
                             @else
                                 <div class="card-item font-bold bg-blue-300">Threads</div>
                                 @foreach($category->threads as $thread)
-                                    <div class="card-item">
+                                    <a class="card-item" href="{{route('thread.show', $thread->id)}}">
                                         {{$thread->id}} {{$thread->title}} ({{$thread->replyCount}})
-                                    </div>
+                                    </a>
                                 @endforeach
 
                             @endif

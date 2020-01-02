@@ -12128,12 +12128,25 @@ main .description {
   color: #b7791f;
 }
 
+.card.card-color-gray {
+  border-color: #a0aec0;
+}
+
+.card.card-color-gray .card-header {
+  background-color: #edf2f7;
+  color: #4a5568;
+}
+
 .card .card-body {
   width: 100%;
 }
 
 .card .card-body > p {
   color: #4a5568;
+}
+
+.card .card-body > .card-item {
+  display: flex;
 }
 
 .card .card-item {
@@ -12143,6 +12156,10 @@ main .description {
 
 .card .card-item:not(:last-child) {
   border-bottom-width: 1px;
+}
+
+.card a.card-item:hover {
+  background-color: #bee3f8;
 }
 
 .btn {

@@ -15,6 +15,23 @@
             </div>
             <h1>{{$thread->title}}</h1>
 
+            <div class="card card-color-gray">
+                <div class="card-header">
+                    Bearbeitungsfunktionen
+                </div>
+
+                <div class="card-body p-3 flex justify-between">
+                    <div class="flex">
+                        <a href="#" class="mr-3 hover:bg-gray-300 bg-gray-200 flex-0 flex items-center rounded pr-2 hover:no-underline text-gray-700"><span class="mr-2 bg-gray-600 text-white p-1 rounded"><i class="fa fa-fw fa-comment"></i></span>antworten</a>
+                        <a href="#" class="mr-3 hover:bg-gray-300 bg-gray-200 flex-0 flex items-center rounded pr-2 hover:no-underline text-gray-700"><span class="mr-2 bg-gray-600 text-white p-1 rounded"><i class="fa fa-fw fa-pencil-alt "></i></span>bearbeiten</a>
+                        <a href="#" class="mr-3 hover:bg-gray-300 bg-gray-200 flex-0 flex items-center rounded pr-2 hover:no-underline text-gray-700"><span class="mr-2 bg-gray-600 text-white p-1 rounded"><i class="fa fa-fw fa-toggle-on "></i></span>deaktivieren</a>
+                    </div>
+                    <div class="flex">
+                        <a href="#" class="mr-3 hover:bg-red-300 bg-red-200 flex-0 flex items-center rounded pr-2 hover:no-underline text-red-700"><span class="mr-2 bg-red-600 text-white p-1 rounded"><i class="fa fa-fw fa-trash-alt "></i></span>löschen</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="card card-color-info">
                 <div class="card-header flex justify-between">
                     <div>gepostet {{$thread->created_at->locale('de_DE')->isoFormat('dddd, DD.MM.YYYY')}} um {{$thread->created_at->locale('de_DE')->isoFormat('HH:mm:ss')}}</div>
