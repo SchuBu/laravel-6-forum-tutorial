@@ -57,6 +57,18 @@
             </div>
         @endif
 
+        @if ($errors->any())
+            <div class="container mx-auto">
+                <div class="text-sm border border-t-8 rounded text-red-700 border-red-600 bg-red-100 px-3 py-4 mb-5" role="alert">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        @endif
+
         @yield('content')
     </main>
 </div>

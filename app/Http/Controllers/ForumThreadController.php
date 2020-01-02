@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Thread;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Response;
+use Illuminate\View\View;
 
 class ForumThreadController extends Controller
 {
@@ -21,11 +23,12 @@ class ForumThreadController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return void
+     * @param Category $forum
+     * @return View
      */
-    public function create()
+    public function create(Category $forum)
     {
-        //
+        return view('thread.create', compact('forum'));
     }
 
     /**
@@ -34,9 +37,18 @@ class ForumThreadController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return void
      */
-    public function store(Request $request)
+    public function store(Category $forum, Request $request)
     {
-        //
+        $data = $this->validate($request, [
+            "title" => "required|min:3",
+            "body" => "required|min:10"
+        ]);
+
+        auth()->loginUsingId(1);
+
+        $forum->threads()->create(array_merge($data, ["user_id" => auth()->id()]));
+
+        return redirect(route('forum', $forum->id))->withSession('Thread wurde erstellt!');
     }
 
     /**
