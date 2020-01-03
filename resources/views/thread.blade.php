@@ -4,33 +4,29 @@
     <div class="flex items-center">
         <div class="container mx-auto">
 
-            @if (session('status'))
-                <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
-
             <div class="breadcrumbs bg-gray-300 text-gray-600 rounded text-sm py-2 px-4 mb-5">
                 <a href="#">Kategorie 1</a> <i class="fa fa-angle-double-right fa-fw"></i> <a href="#">Subkategorie</a> <i class="fa fa-angle-double-right fa-fw"></i> <a href="#">3 An example Forum</a>
             </div>
             <h1>{{$thread->title}}</h1>
 
-            <div class="card card-color-gray">
-                <div class="card-header">
-                    Bearbeitungsfunktionen
-                </div>
+            @auth
+                <div class="card card-color-gray">
+                    <div class="card-header">
+                        Bearbeitungsfunktionen
+                    </div>
 
-                <div class="card-body p-3 flex justify-between">
-                    <div class="flex">
-                        <a href="#" class="mr-3 hover:bg-gray-300 bg-gray-200 flex-0 flex items-center rounded pr-2 hover:no-underline text-gray-700"><span class="mr-2 bg-gray-600 text-white p-1 rounded"><i class="fa fa-fw fa-comment"></i></span>antworten</a>
-                        <a href="#" class="mr-3 hover:bg-gray-300 bg-gray-200 flex-0 flex items-center rounded pr-2 hover:no-underline text-gray-700"><span class="mr-2 bg-gray-600 text-white p-1 rounded"><i class="fa fa-fw fa-pencil-alt "></i></span>bearbeiten</a>
-                        <a href="#" class="mr-3 hover:bg-gray-300 bg-gray-200 flex-0 flex items-center rounded pr-2 hover:no-underline text-gray-700"><span class="mr-2 bg-gray-600 text-white p-1 rounded"><i class="fa fa-fw fa-toggle-on "></i></span>deaktivieren</a>
-                    </div>
-                    <div class="flex">
-                        <a href="#" class="mr-3 hover:bg-red-300 bg-red-200 flex-0 flex items-center rounded pr-2 hover:no-underline text-red-700"><span class="mr-2 bg-red-600 text-white p-1 rounded"><i class="fa fa-fw fa-trash-alt "></i></span>löschen</a>
+                    <div class="card-body p-3 flex justify-between">
+                        <div>
+                            <a href="#" class="btn-icon btn-secondary mr-2"><span><i class="fa fa-comment fa-fw"></i></span>antworten</a>
+                            <a href="{{ route('forum.thread.edit', [$thread->category_id, $thread->id]) }}" class="btn-icon btn-secondary mr-2"><span><i class="fa fa-pencil-alt fa-fw"></i></span>bearbeiten</a>
+                            <a href="#" class="btn-icon btn-secondary mr-2"><span><i class="fa fa-toggle-on fa-fw"></i></span>deaktivieren</a>
+                        </div>
+                        <div>
+                            <button class="btn-icon icon-append btn-danger"><span><i class="fa fa-trash-alt fa-fw"></i></span>löschen</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endauth
 
             <div class="card card-color-info">
                 <div class="card-header flex justify-between">

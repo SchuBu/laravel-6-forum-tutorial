@@ -9,6 +9,21 @@
     }
 }
 
+.btn-group {
+    @apply flex;
+    .btn {
+        @apply rounded-none;
+    }
+
+    .btn:first-child {
+        @apply rounded-l;
+    }
+
+    .btn:last-child {
+        @apply rounded-r;
+    }
+}
+
 .btn-primary {
     @apply bg-blue-500 text-gray-100;
     &:hover {
@@ -63,3 +78,5 @@
 .btn-2xl {
     @apply text-2xl;
 }
+
+@import 'buttons-icon';

@@ -12180,6 +12180,24 @@ main .description {
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
+.btn-group {
+  display: flex;
+}
+
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.btn-group .btn:last-child {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
 .btn-primary {
   background-color: #4299e1;
   color: #f7fafc;
@@ -12243,6 +12261,128 @@ main .description {
 
 .btn-2xl {
   font-size: 1.5rem;
+}
+
+.btn-icon {
+  border-radius: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-icon:hover {
+  text-decoration: none;
+}
+
+.btn-icon span {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.btn-icon:not(.icon-append) {
+  padding-right: 0.5rem;
+}
+
+.btn-icon:not(.icon-append) span {
+  margin-right: 0.5rem;
+}
+
+.btn-icon.icon-append {
+  padding-left: 0.5rem;
+  flex-direction: row-reverse;
+}
+
+.btn-icon.icon-append span {
+  margin-left: 0.5rem;
+}
+
+.btn-icon.btn-primary {
+  background-color: #bee3f8;
+  color: #4a5568;
+}
+
+.btn-icon.btn-primary span {
+  background-color: #4299e1;
+  color: #fff;
+}
+
+.btn-icon.btn-primary:hover {
+  background-color: #90cdf4;
+}
+
+.btn-icon.btn-primary:hover span {
+  background-color: #3182ce;
+}
+
+.btn-icon.btn-secondary {
+  background-color: #edf2f7;
+  color: #4a5568;
+}
+
+.btn-icon.btn-secondary span {
+  background-color: #a0aec0;
+  color: #fff;
+}
+
+.btn-icon.btn-secondary:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-icon.btn-secondary:hover span {
+  background-color: #718096;
+}
+
+.btn-icon.btn-danger {
+  background-color: #fed7d7;
+  color: #4a5568;
+}
+
+.btn-icon.btn-danger span {
+  background-color: #f56565;
+  color: #fff;
+}
+
+.btn-icon.btn-danger:hover {
+  background-color: #feb2b2;
+}
+
+.btn-icon.btn-danger:hover span {
+  background-color: #e53e3e;
+}
+
+.btn-icon.btn-success {
+  background-color: #c6f6d5;
+  color: #4a5568;
+}
+
+.btn-icon.btn-success span {
+  background-color: #48bb78;
+  color: #fff;
+}
+
+.btn-icon.btn-success:hover {
+  background-color: #9ae6b4;
+}
+
+.btn-icon.btn-success:hover span {
+  background-color: #38a169;
+}
+
+.btn-icon.btn-warning {
+  background-color: #fefcbf;
+  color: #4a5568;
+}
+
+.btn-icon.btn-warning span {
+  background-color: #ecc94b;
+  color: #fff;
+}
+
+.btn-icon.btn-warning:hover {
+  background-color: #faf089;
+}
+
+.btn-icon.btn-warning:hover span {
+  background-color: #d69e2e;
 }
 
 .form-group {

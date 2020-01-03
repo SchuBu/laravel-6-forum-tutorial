@@ -1,0 +1,101 @@
+.btn-icon {
+    @apply rounded inline-flex items-center;
+
+    &:hover {
+        @apply no-underline;
+    }
+
+    span {
+        @apply p-1 rounded;
+    }
+
+    &:not(.icon-append) {
+        @apply pr-2;
+        span {
+            @apply mr-2;
+        }
+    }
+
+    &.icon-append {
+        @apply pl-2 flex-row-reverse;
+        span {
+            @apply ml-2;
+        }
+    }
+
+
+    &.btn-primary {
+        @apply bg-blue-200 text-gray-700;
+
+        span {
+            @apply bg-blue-500 text-white;
+        }
+
+        &:hover {
+            @apply bg-blue-300;
+            span {
+                @apply bg-blue-600;
+            }
+        }
+    }
+
+    &.btn-secondary {
+        @apply bg-gray-200 text-gray-700;
+
+        span {
+            @apply bg-gray-500 text-white;
+        }
+
+        &:hover {
+            @apply bg-gray-300;
+            span {
+                @apply bg-gray-600;
+            }
+        }
+    }
+
+    &.btn-danger {
+        @apply bg-red-200 text-gray-700;
+
+        span {
+            @apply bg-red-500 text-white;
+        }
+
+        &:hover {
+            @apply bg-red-300;
+            span {
+                @apply bg-red-600;
+            }
+        }
+    }
+
+    &.btn-success {
+        @apply bg-green-200 text-gray-700;
+
+        span {
+            @apply bg-green-500 text-white;
+        }
+
+        &:hover {
+            @apply bg-green-300;
+            span {
+                @apply bg-green-600;
+            }
+        }
+    }
+
+    &.btn-warning {
+        @apply bg-yellow-200 text-gray-700;
+
+        span {
+            @apply bg-yellow-500 text-white;
+        }
+
+        &:hover {
+            @apply bg-yellow-300;
+            span {
+                @apply bg-yellow-600;
+            }
+        }
+    }
+}

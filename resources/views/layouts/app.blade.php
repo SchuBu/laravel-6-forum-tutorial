@@ -49,13 +49,7 @@
     </nav>
 
     <main>
-        @if (session('status'))
-            <div class="container mx-auto">
-                <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-5" role="alert">
-                    {{ session('status') }}
-                </div>
-            </div>
-        @endif
+        @include('components.session-message')
 
         @if ($errors->any())
             <div class="container mx-auto">
