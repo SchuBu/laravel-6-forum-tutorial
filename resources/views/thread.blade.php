@@ -4,6 +4,24 @@
     <div class="flex items-center">
         <div class="container mx-auto">
 
+            <modal name="hello-world" height="auto">
+                <div class="flex flex-col">
+                    <div class="modal-header font-bold text-gray-700 p-4 bg-gray-300 border-b border-gray-400">Bestätigung notwendig</div>
+                    <div class="modal-body flex-1 p-5 my-5">
+                        Sind Sie sicher, dass Sie diesen Thread endgültig löschen wollen?
+                    </div>
+                    <div class="modal-footer p-4 border-t border-gray-400" >
+                        <form action="{{route('forum.thread.destroy', [$thread->category_id, $thread->id])}}" method="post">
+                            @csrf
+                            @method('delete')
+
+                            <button @click.prevent="$modal.hide('hello-world')" class="btn btn-primary">abbrechen</button>
+                            <button class="btn btn-danger">ja, löschen!</button>
+                        </form>
+                    </div>
+                </div>
+            </modal>
+
             <div class="breadcrumbs bg-gray-300 text-gray-600 rounded text-sm py-2 px-4 mb-5">
                 <a href="#">Kategorie 1</a> <i class="fa fa-angle-double-right fa-fw"></i> <a href="#">Subkategorie</a> <i class="fa fa-angle-double-right fa-fw"></i> <a href="#">3 An example Forum</a>
             </div>
@@ -22,7 +40,7 @@
                             <a href="#" class="btn-icon btn-secondary mr-2"><span><i class="fa fa-toggle-on fa-fw"></i></span>deaktivieren</a>
                         </div>
                         <div>
-                            <button class="btn-icon icon-append btn-danger"><span><i class="fa fa-trash-alt fa-fw"></i></span>löschen</button>
+                            <button @click="$modal.show('hello-world')" class="btn-icon icon-append btn-danger"><span><i class="fa fa-trash-alt fa-fw"></i></span>löschen</button>
                         </div>
                     </div>
                 </div>

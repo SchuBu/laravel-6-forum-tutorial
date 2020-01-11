@@ -87,11 +87,12 @@ class ForumThreadController extends Controller {
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Category $category
+     * @param \App\Category $forum
      * @param Thread $thread
      * @return void
      */
-    public function destroy(Category $category, Thread $thread) {
-        //
+    public function destroy(Category $forum, Thread $thread) {
+        $thread->delete();
+        return redirect(route('forum', $forum->id))->withSuccess('Thread wurde gelöscht!');
     }
 }

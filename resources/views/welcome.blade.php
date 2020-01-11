@@ -40,6 +40,14 @@
                                     </a>
                                 @endforeach
 
+                                {{--@TODO: usergruppe abfragen--}}
+                                @foreach($category->threads()->onlyTrashed()->get() as $thread)
+                                    <a class="card-item opacity-50" href="{{route('thread.show', $thread->id)}}">
+                                        gelöscht: {{$thread->id}} {{$thread->title}} ({{$thread->replyCount}})
+                                    </a>
+                                @endforeach
+
+
                             @endif
                         </div>
                     </div>
